@@ -62,4 +62,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Weryfikacja importu aplikacji
+        env:
+          DB_PATH: ./test.db
         run: python -c "from app.main import app; print('OK')"
