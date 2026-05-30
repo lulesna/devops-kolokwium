@@ -64,4 +64,6 @@ jobs:
       - name: Weryfikacja importu aplikacji
         env:
           DB_PATH: ./test.db
-        run: python -c "from app.main import app; print('OK')"
+        run: |
+          python -c "from app.main import app; print('OK')"
+          echo "Build successful"
